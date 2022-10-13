@@ -1,0 +1,24 @@
+<div class="MainTimeTelling">
+  <div class="DayOfTheWeek">
+    <h1>Current Time</h1>
+    {{displayDayOfTheWeek}}
+  </div>
+
+  <div class="Time">
+    <div>{{displayHour}}: {{displayMinute}}: {{displaySecond}} {{displayAMPM}}</div>
+  </div>
+
+  <div class="alarm">
+    <h1>Enter hour(0-12)</h1>
+    <input type="text" [(ngModel)]="alarmHour">
+    <h1>Enter minute(0-60)</h1>
+    <input type="text" [(ngModel)]="alarmMinute">
+    <br>
+    <br>
+    <br>
+    <button (click)="onClickSetAlarm()">Set Alarm</button>
+    <button (click)="onClickClearAlarm()">Clear Alarm</button>
+    <h3>{{displayAlert}}</h3>
+
+  </div>
+</div>
